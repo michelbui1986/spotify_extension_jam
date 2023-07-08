@@ -1,5 +1,12 @@
-require("path-browserify").browserify = require("path");
-require("dotenv").config();
+import { browserify } from "path-browserify";
+import { config } from "dotenv";
+import * as path from "path";
+
+browserify({ builtin: true }).alias({
+  path: path.resolve("path-browserify"),
+});
+
+config();
 let accessToken;
 const clientID = process.env.REACT_APP_CLIENT_ID;
 const redirectUri = process.env.redirectUri;
