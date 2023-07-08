@@ -1,9 +1,9 @@
 import { browserify } from "path-browserify";
 import { config } from "dotenv";
-import * as path from "path";
+import * as os from "os";
 
 browserify({ builtin: true }).alias({
-  path: path.resolve("path-browserify"),
+  os: os.platform(),
 });
 
 config();
