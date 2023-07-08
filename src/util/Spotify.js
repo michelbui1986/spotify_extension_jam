@@ -1,3 +1,4 @@
+require("path-browserify").browserify = require("path");
 require("dotenv").config();
 let accessToken;
 const clientID = process.env.REACT_APP_CLIENT_ID;
