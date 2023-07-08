@@ -1,6 +1,6 @@
 let accessToken;
 const clientID = process.env.REACT_APP_CLIENT_ID;
-const redirectUri = 'http://localhost:3000/callback';
+const redirectUri = process.env.redirectUri;
 const Spotify = {
   getAccessToken() {
     if (accessToken) {
