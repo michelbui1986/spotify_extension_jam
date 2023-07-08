@@ -1,12 +1,3 @@
-import { browserify } from "path-browserify";
-import { config } from "dotenv";
-import * as os from "os";
-
-browserify({ builtin: true }).alias({
-  os: os.platform(),
-});
-
-config();
 let accessToken;
 const clientID = process.env.REACT_APP_CLIENT_ID;
 const redirectUri = process.env.redirectUri;
